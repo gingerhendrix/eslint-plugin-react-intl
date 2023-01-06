@@ -1,0 +1,9 @@
+{
+  "in_a_example": "Example",
+  "example": {
+    "in_a_another_example": "Another Example",
+    "deeper": {
+      "a_deeper_example": "A deeper example"
+    }
+  }
+}

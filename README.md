@@ -1,6 +1,8 @@
-# @godaddy/eslint-plugin-react-intl
+# Fork of @godaddy/eslint-plugin-react-intl
 
 Validation of locale ids used with react-intl functions/components like `<FormattedMessage />`, `formatMessage` and `defineMessages`.
+
+Forked to provide support for nested json in translation files and dotted keys.
 
 ## Installation
 
@@ -37,7 +39,7 @@ Alternatively, you can add `@godaddy/react-intl` to the plugins section of confi
 }
 ```
 
-By default, `id-missing` and `no-default` rules are enabled to show as errors, and `id-prefix` rule is disabled. 
+By default, `id-missing` and `no-default` rules are enabled to show as errors, and `id-prefix` rule is disabled.
 If you need to set any of these rules differently, then configure the rules under the rules section.
 
 ```json
@@ -62,10 +64,10 @@ changed by adding this setting to the config
 }
 ```
 
-If your IDE integrates with eslint, and you are working on multiple packages in a project such as a monorepo, 
-then it may have trouble finding which locale files to check keys against. 
-To help with this, you can specify the `projectRoot` setting. 
-This will need to be an absolute path to the package, which can be determined dynamically from one machine to 
+If your IDE integrates with eslint, and you are working on multiple packages in a project such as a monorepo,
+then it may have trouble finding which locale files to check keys against.
+To help with this, you can specify the `projectRoot` setting.
+This will need to be an absolute path to the package, which can be determined dynamically from one machine to
 another by using `__dirname` in a .eslintrc.js file.
 
 ```js
@@ -78,7 +80,7 @@ module.exports = {
 
 ## Locale Files
 
-The locale files should be named with their market id (like en-US.json) and should contain data 
+The locale files should be named with their market id (like en-US.json) and should contain data
 in key-value pair format
 
 ```json
